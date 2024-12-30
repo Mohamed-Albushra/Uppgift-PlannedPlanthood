@@ -177,3 +177,217 @@ body {
   background-color: var(--clr-accent-light-1);
   color: var(--clr-primary-dark);
 }
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var( --clr-neutral-100);
+  .logo{
+    display: inline;
+  }
+  img {
+    display: inline;
+    width: 4vw;
+    /* changed the logo color using figma */
+  }
+  h3{
+    display: inline-block;
+    color: var(--clr-accent);
+    vertical-align: super;
+  }
+  .nav{
+    list-style-type: none;
+  }
+  .nav_list li{
+    display: inline-block;
+    padding-right: 5vw;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-semi-bold);
+  }
+}
+
+
+header {
+  padding-top: 1vh;
+  h2 , p {
+    text-align: center;
+    margin: 2vh auto
+  }
+}
+
+.images_container{
+max-width: 50%;
+height: 35vw;
+border: 1rem solid var( --clr-neutral-100);
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+margin: auto;
+margin-bottom: 3vh;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+grid-template-rows: 1fr 1fr 1fr 1fr;
+grid-template-areas: 
+"img1 img1 img2 img3 img5 img5"
+"img1 img1 img2 img3 img5 img5"
+"img1 img1 img4 img4 img6 img6"
+"img1 img1 img4 img4 img6 img6";
+justify-items: stretch;
+align-items: stretch;  
+
+.img1 { grid-area: img1; }
+.img2 { grid-area: img2; }
+.img3 { grid-area: img3; }
+.img4 { grid-area: img4; }
+.img5 { grid-area: img5; }
+.img6 { grid-area: img6; }
+}
+
+.mid_section{
+  display: flex;
+  align-items: center;
+  background-color: var( --clr-neutral-100);
+  height: 30vh;
+  padding: 2vh 40%;
+  img{
+    background-color: var(--clr-green-400);
+    border-radius: 50%;
+    margin-inline-start: auto;
+  }
+  /* div{
+    width: 50%;
+    word-wrap: break-word;
+  } */
+  h2{
+    width: 20vw;
+    padding: 2vh 0;
+  }
+  input{
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 30px;
+    padding-left: 1rem;
+
+  }
+  button{
+    position: absolute;
+    background-color: var(--clr-green-400);
+    color: var(--clr-neutral-100) ;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    width: 5rem;
+    height: 2rem;
+    left: 50.3vw;
+    border-radius: 30px;
+    margin-top: 0.25rem;
+  }
+}
+
+
+.card_container{
+  display: grid;
+  width: 50%;
+  justify-items: center;
+  margin: 5vh 25%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2% 2%;
+}
+
+
+.card {
+  display: grid;
+  justify-items: stretch;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 0.5fr 2fr 0.5fr;
+  height: 45rem;
+  width: 15rem;
+  border: 1rem solid var( --clr-neutral-100);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.card_img { 
+  width: 13rem;
+  grid-area: 1 / 1 / 2 / 2; }
+
+.tags { 
+  padding: 5px;
+  grid-area: 2 / 1 / 3 / 2; }
+
+.card_info {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1.5fr;
+  gap: 0px 0px;
+  grid-area: 3 / 1 / 4 / 2;
+  padding: 1rem;
+}
+
+.card_name { grid-area: 1 / 1 / 2 / 2; }
+
+.card_detils { grid-area: 2 / 1 / 3 / 2; }
+
+.avatar {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-area: 4 / 1 / 5 / 2;
+  align-items: center;
+  padding: 1rem;
+}
+
+.avatar_img { 
+  height: 3rem;
+  grid-area: 1 / 1 / 2 / 2; }
+
+.avatar_detils { 
+  margin-left: 1rem;
+  grid-area: 1 / 2 / 2 / 3; }
+
+.tag{
+  font-size: 1rem;
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 20px;
+  margin: 4px ;
+  padding: 6px;
+  color: var(--clr-accent-light-1);
+}
+
+.blommor{
+  background-color: var(--clr-flower);
+}
+.atbart{
+  background-color: var(--clr-edible);
+}
+.grönska{
+  background-color: var(--clr-green);
+}
+.solälskande{
+  background-color: var(--clr-sunloving);
+}
+.lättodlat{
+  background-color: var(--clr-easy);
+}
+.dekorativ{
+  background-color: var(--clr-decorative);
+}
+.färgstark{
+  background-color: var(--clr-colorful);
+}
+.tålig{
+  background-color: var(--clr-robust);
+}
+.kryddor{
+  background-color: var(--clr-air);
+}
+.doftande{
+  background-color: var(--clr-fragrant);
+}
+.snabbväxande{
+  background-color: var(--clr-fast);
+}
+.luftfuktande{
+  background-color: var(--clr-air);
+}
