@@ -199,11 +199,44 @@ nav{
   .nav{
     list-style-type: none;
   }
+  .hamburger-menu__button {
+    display: none;
+    width: 50px;
+    height: 65px;
+    span {
+      line-height: 8px;
+      color: var(--clr-green);
+      text-align: center;
+      font-size: var(--fs-700);
+      font-weight: var(--fs-900);
+    }
+    span:last-child {
+      padding-bottom: 5px;
+    }
+
+  }
+  .hamburger-menu__button:hover{
+    background-color: var(--clr-accent);
+    span{
+      color: var(--clr-primary-light-1);
+    }
+  }
+  
+  .nav_list{
+    height: 100%;
+  }
   .nav_list li{
     display: inline-block;
-    padding-right: 5rem;
+    padding: 3% 3rem;
     font-size: var(--fs-400);
     font-weight: var(--fw-semi-bold);
+    height: 100%;
+  }
+  .nav_list li:hover{
+    background-color: var(--clr-accent);
+    a{
+      color: var(--clr-primary-light-1);
+    }
   }
 }
 
@@ -241,12 +274,13 @@ align-items: stretch;
 .img5 { grid-area: img5; }
 .img6 { grid-area: img6; }
 }
-
+.background{
+  background-color: var( --clr-neutral-100);
+}
 .mid_section{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var( --clr-neutral-100);
   height: 18rem;
   margin: auto;
   .planting{
@@ -278,7 +312,7 @@ align-items: stretch;
   input{
     display: inline-block;
     border: none;
-    width: 14rem;
+    width: 100%;
 
   }
   button{
@@ -292,6 +326,11 @@ align-items: stretch;
     height: 2rem;
     border-radius: 30px;
     padding: 0.1rem;
+  }
+  button:hover{
+    background-color:  var(--clr-neutral-100);
+    color: var(--clr-green-400);
+    border: 1px solid var(--clr-green-400);
   }
 }
 
@@ -440,6 +479,11 @@ align-items: stretch;
     margin-top: 0.25rem;
     float: inline-end;
   }
+  button:hover{
+    background-color:  var(--clr-neutral-100);
+    color: var(--clr-green-400);
+    border: 1px solid var(--clr-green-400);
+  }
   div{
     padding: 2rem;
   }
@@ -467,9 +511,14 @@ footer{
     p{
       margin: 1rem;
     }
-    img, b{
+    img, a{
+      font-weight: bold;
+      color: var(--clr-neutral-100);
       display: inline-block;
       margin-left: 1rem;
+    }
+    a:hover{
+      cursor: pointer;
     }
     .phone{
       margin-bottom: 1rem;
@@ -487,7 +536,20 @@ footer{
 }
 
 
+
 @media screen and (max-width: 1280px) {
+  nav{
+      .nav_list{
+      display: none;
+    }
+    .hamburger-menu__button{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 3;
+    }
+  }
   .images_container{
     grid-template-columns: 1fr 1fr 1fr; 
     grid-template-rows: 1fr 1fr;
@@ -501,26 +563,28 @@ footer{
   .mid_section{
     flex-direction: column-reverse;
     height: inherit;
+    max-width: 35rem;
     padding: 2rem;
     div{
-      width: 35rem;
+      width: 100%;
     }
     h2 {
-      width: 30rem;
+      width: 100%;
       padding: 2rem 0;
       margin: auto;
       text-align: center;
     }
     .email_holder{
-      width: 30rem;
+      width: 80%;
+      margin: auto;
       justify-content: space-between
     }
     input{
-      padding-left: 9rem;
-      width: 24rem;
+      padding-right: 20%;
     }
   }
   .card_container{
+    margin: 3rem auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
