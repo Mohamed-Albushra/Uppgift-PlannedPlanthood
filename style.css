@@ -218,7 +218,7 @@ header {
 
 .images_container{
 max-width: 40%;
-height: 35rem;
+height: 27rem;
 border: 1rem solid var( --clr-neutral-100);
 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 margin: auto;
@@ -259,21 +259,30 @@ align-items: stretch;
     display: flex;
     flex-direction: column;
     word-wrap: break-word;
-    width: 15rem;
+    width: 20rem;
   }
   h2{
-    width: 15rem;
+    width: 20rem;
     padding: 2rem 0;
   }
-  input{
-    width: 15rem;
-    height: 2.5rem;
+  .email_holder{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid;
+    width: 20rem;
+    height: 2.3rem;
     border-radius: 30px;
+    padding: 0.1rem;
     padding-left: 1rem;
+  }
+  input{
+    display: inline-block;
+    border: none;
+    width: 14rem;
 
   }
   button{
-    position: absolute;
+    display: inline-block;
     background-color: var(--clr-green-400);
     color: var(--clr-neutral-100) ;
     border: none;
@@ -281,54 +290,59 @@ align-items: stretch;
     text-align: center;
     width: 5rem;
     height: 2rem;
-    left:  47.2vw;
-    top: 68.54rem;
     border-radius: 30px;
-    margin-top: 0.25rem;
+    padding: 0.1rem;
   }
 }
 
 
 .card_container{
   display: grid;
-  width: 40%;
+  max-width: 55%;
   justify-items: center;
-  margin: 7rem 25%;
+  margin: 7rem auto;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 2% 2%;
+  gap: 1vw 1vh;
 
   .card {
     display: grid;
     justify-items: stretch;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 0.5fr 2fr 0.5fr;
-    height: 45rem;
-    width: 15rem;
-    border: 1rem solid var( --clr-neutral-100);
+    grid-template-rows: 1.75fr 0.5fr 2fr 0.5fr;
+    /* grid-template-rows: 1fr 0.5fr 1fr 0.3fr; */
+    height: 40rem;
+    /* height: 39rem; */
+    width: 13vw;
+    border: 0.5rem solid var( --clr-neutral-100);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
 
   .card_img { 
-    width: 13rem;
+    /* width: 10rem; */
     grid-area: 1 / 1 / 2 / 2; }
 
   .tags { 
-    padding: 5px;
+    font-size: 0.5em;
+    padding: 3px;
     grid-area: 2 / 1 / 3 / 2; }
 
   .card_info {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1.5fr;
+    grid-template-rows: 0.3fr 1.5fr;
     gap: 0px 0px;
     grid-area: 3 / 1 / 4 / 2;
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
-  .card_name { grid-area: 1 / 1 / 2 / 2; }
+  .card_name { 
+    font-size: 1.5em;
+    grid-area: 1 / 1 / 2 / 2; }
 
-  .card_details { grid-area: 2 / 1 / 3 / 2; }
+  .card_details { 
+    font-size:clamp(0.5em, 0.75, 1em); 
+    grid-area: 2 / 1 / 3 / 2; }
 
   .avatar {
     display: grid;
@@ -337,19 +351,20 @@ align-items: stretch;
     gap: 0px 0px;
     grid-area: 4 / 1 / 5 / 2;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .avatar_img { 
-    height: 3rem;
+    height: 2rem;
     grid-area: 1 / 1 / 2 / 2; }
 
   .avatar_details { 
+    font-size: 0.75em;
     margin-left: 1rem;
     grid-area: 1 / 2 / 2 / 3; }
 
   .tag{
-    font-size: 1rem;
+    font-size: clamp(0.5em, 0.65rem, 0.75rem);
     display: inline-block;
     border: 1px solid;
     border-radius: 20px;
@@ -467,6 +482,110 @@ footer{
       margin-bottom: 1rem;
       list-style: none;
       padding-left: 4rem;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1280px) {
+  .images_container{
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "img1 img2 img3"
+    "img4 img5 img6";
+    width: 80vw;
+    height: 40vw;
+
+  }
+  .mid_section{
+    flex-direction: column-reverse;
+    height: inherit;
+    padding: 2rem;
+    div{
+      width: 35rem;
+    }
+    h2 {
+      width: 30rem;
+      padding: 2rem 0;
+      margin: auto;
+      text-align: center;
+    }
+    .email_holder{
+      width: 30rem;
+      justify-content: space-between
+    }
+    input{
+      padding-left: 9rem;
+      width: 24rem;
+    }
+  }
+  .card_container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    max-width: 75%;
+    .card {
+      display: grid;
+      width: 58%;
+      
+    }
+  
+    .card_img { 
+      
+    }
+  
+    .tags { 
+      
+    }
+  
+    .card_info {
+      display: grid;
+
+    }
+  
+    .card_name { 
+      
+    }
+  
+    .card_details { 
+      
+    }
+  
+    .avatar {
+      display: grid;
+
+    }
+  
+    .avatar_img { 
+      
+    }
+  
+    .avatar_details { 
+      
+    }
+  
+    .tag{
+
+      
+    }
+  
+    
+  }
+  .bottom_section{
+    flex-direction: column;
+    height: inherit;
+    padding: 2rem;
+    h2, p{
+      text-align: center;
+      padding: 0.5rem;
+      margin: auto;
+    }
+  }
+  footer{
+    display: block;
+    .footer_nav{
+      display: none;
     }
   }
 }
